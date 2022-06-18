@@ -14,24 +14,31 @@ The goals of this challenge are to produce a small python flask app for the atta
 ## TODO. 1-st version.
 Rendering template in the backend. Flask + Bootstrap.
  - [ ] Project setup
-    - [ ] Readme
-    - [ ] Views
-    - [ ] Templates
+    - [x] Readme
+    - [x] Views
+    - [x] Templates
     - [ ] Settings
     - [ ] Static /
+    - [ ] Tests
  - [ ] Load Json data from a file
      - [ ] Base load
      - [ ] Validate data with pydentic
  - [ ] Base layout
-    - [ ] Base template
-    - [ ] Sidebar
-    - [ ] Dashboard
+    - [x] Base template
+    - [x] Sidebar
+    - [x] Dashboard
         - [ ] Counters
         - [ ] Graphs
-    - [ ] Vulnerability
+    - [x] Vulnerability
         - [ ] Table
         - [ ] Filters
     - [ ] Vulnerability detail
+    - [ ] Adaptive version
+      - [ ] Menu
+      - [ ] Views
+    - [ ] 404/500 errors templates
+    - [ ] Favicon
+    - [ ] Sidebar menu. Generate menu data in flask.
  - [ ] Dashboard view
     - [ ] Counters
     - [ ] Graph widgets. Data.
@@ -47,6 +54,10 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Custom styles
     - [ ] Responsive layouts
  - [ ] Tests
+ - [ ] Final check
+    - [ ] Titles
+    - [ ] Sentry
+    - [ ] Local/Production
  - [ ] Updates
  - [ ] Deployment with Docker
 
