@@ -6,25 +6,41 @@ The goals of this challenge are to produce a small python flask app for the atta
  - UI Code challenge.docx - description of the challenge
  - Vulnerability data.json - dummy data
 
+## Questions
+ - [ ] Use cases
+ - [ ] Users roles
+ - [ ] Tech. requiments
+
 ## TODO. 1-st version.
 Rendering template in the backend. Flask + Bootstrap.
  - [ ] Project setup
+    - [ ] Readme
+    - [ ] Views
+    - [ ] Templates
+    - [ ] Settings
+    - [ ] Static /
  - [ ] Load Json data from a file
      - [ ] Base load
      - [ ] Validate data with pydentic
  - [ ] Base layout
     - [ ] Base template
-    - [ ] Dashboard
-    - [ ] Vulnerability
     - [ ] Sidebar
- - [ ] Dashboard
+    - [ ] Dashboard
+        - [ ] Counters
+        - [ ] Graphs
+    - [ ] Vulnerability
+        - [ ] Table
+        - [ ] Filters
+    - [ ] Vulnerability detail
+ - [ ] Dashboard view
     - [ ] Counters
     - [ ] Graph widgets. Data.
     - [ ] Graph widgets. Render.
- - [ ] Vulnerability
+ - [ ] Vulnerability view
     - [ ] Filters
     - [ ] Table
     - [ ] Pagination
+    - [ ] Vulnerability detail
  - [ ] Frontend customisation
     - [ ] Gulp setup
     - [ ] Branding
@@ -44,11 +60,6 @@ Rendering template in the backend. Flask + Bootstrap.
  - [ ] Statistics
  - [ ] ? Live graphs
 
-## Questions
- - [ ] Use cases
- - [ ] Users roles
- - [ ] Tech. requiments
-
 
 ## TODO. 2-d version.
 React + backend API
@@ -66,6 +77,7 @@ React + backend API
  - [ ]  React. Initial project
  - [ ]  React. Components
 	 - [ ] Login page
+        - [ ] Login form
 	 - [ ] Sidebar
 		 - [ ] Menu item
 	 - [ ]  Dashboard
