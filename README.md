@@ -19,7 +19,9 @@ Rendering template in the backend. Flask + Bootstrap.
     - [x] Templates
     - [ ] Settings
     - [ ] Static /
-    - [ ] Tests
+    - [x] Tests
+    - [ ] Flask Blueprint
+    - [ ] .env file
  - [ ] Load Json data from a file
      - [ ] Base load
      - [ ] Validate data with pydentic
@@ -102,3 +104,15 @@ React + backend API
  - [ ]  React. Load data
  - [ ]  React. Tests
  - [ ]  React. Deployment
+
+
+## Installation (development environment) without docker
+```mkvirtualenv --python=$(which python3) challenge```
+```pip install -r requirements/local.txt```
+```export FLASK_APP=app.py```
+```export FLASK_ENV=development```
+```flask run```
+Open http://localhost:5000 to view the Dashboard
+
+### Testing
+```python -m pytest -v```
