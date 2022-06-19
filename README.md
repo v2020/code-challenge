@@ -23,14 +23,16 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Flask Blueprint
     - [ ] .env file
  - [ ] Load Json data from a file
-     - [ ] Base load
+     - [x] Base load
      - [ ] Validate data with pydentic
+     - [ ] Read json data from URL
  - [ ] Base layout
     - [x] Base template
     - [x] Sidebar
     - [x] Dashboard
         - [ ] Counters
         - [ ] Graphs
+        - [ ] Graphs data API
     - [x] Vulnerability
         - [ ] Table
         - [ ] Filters
@@ -60,8 +62,11 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Titles
     - [ ] Sentry
     - [ ] Local/Production
+    - [ ] Type checking
+    - [ ] Comments
  - [ ] Updates
  - [ ] Deployment with Docker
+ - [ ] CI/CD
 
 ## Features
  - [ ] Login/logout pages
