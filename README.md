@@ -3,6 +3,16 @@
 # UI Code challenge
 The goals of this challenge are to produce a small python flask app for the attached mock-up. There is also some dummy data provided that needs to be rendered into these views.
 
+
+# Table of Contents
+ - [Info](#info)
+ - [Questions](#questions)
+ - [TODO. 1-st version.](#todo-1-st-version)
+ - [Features](#features)
+ - [TODO. 2-d version.](#todo-2-d-version)
+ - [Installation](#installation-development-environment-without-docker)
+ - [Testing](#testing)
+
 ## Info
  - Mock Up.png - Dashboard and Vulnerability mockups
  - UI Code challenge.docx - description of the challenge
@@ -128,5 +138,5 @@ React + backend API
  - ```flask run```
  - Open http://localhost:5000 to view the Dashboard
 
-### Testing
+## Testing
 ```python -m pytest -v```
