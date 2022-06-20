@@ -32,7 +32,7 @@ class CountBox:
 
     @property
     def label(self) -> str:
-        return self._value.split("-")[1].title()
+        return self._value.split("-")[-1].title()
 
     @property
     def css_class(self) -> str:
