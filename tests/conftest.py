@@ -5,7 +5,7 @@ from project.utils import DashboardUtils, VulnerabilityDataJson
 
 @pytest.fixture()
 def client():
-    # test client
+    """test client"""
     flask_app = create_app()
     with flask_app.test_client() as client:
         with flask_app.app_context():
@@ -14,11 +14,11 @@ def client():
 
 @pytest.fixture()
 def dashboard_utils():
-    # DashboardUtils test
+    """DashboardUtils test"""
     return DashboardUtils(VulnerabilityDataJson("tests/data/test_data.json"))
 
 
 @pytest.fixture()
 def vdata():
-    # VulnerabilityDataJson test
+    """VulnerabilityDataJson test"""
     return VulnerabilityDataJson("tests/data/test_data.json")
