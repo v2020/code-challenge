@@ -23,6 +23,7 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Flask Blueprint
     - [x] .env file
     - [ ] Logging
+    - [ ] Load json file DATA_FILE at app start
  - [ ] Load Json data from a file
      - [x] Base load
      - [ ] Validate data with pydentic
@@ -55,6 +56,7 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Pagination
     - [ ] Vulnerability detail
     - [ ] Custom table "Sort" argument name
+    - [x] Column get parametrs !Refactoring needed
     - [ ] Refactoring
  - [ ] Frontend customisation
     - [ ] Gulp setup
@@ -64,6 +66,7 @@ Rendering template in the backend. Flask + Bootstrap.
  - [ ] Tests
  - [ ] Final check
     - [ ] Titles
+    - [ ] Logging
     - [ ] Sentry
     - [ ] Local/Production
     - [ ] Type checking

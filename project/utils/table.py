@@ -38,13 +38,20 @@ class Column:
         return ""
 
     @property
-    def params(self):
+    def params(self) -> str:
+        """return get parameters for each column
+        TODO: Refactoring needs
+        Returns:
+            str: get parameters
+        """
         param = f"?sort={self._key}"
         if self.is_up and self.active:
+            # reverse sort
             param = f"?sort=-{self._key}"
 
         if self.table_filters:
             for i in self.table_filters:
+                # save filter form values
                 if i != "sort":
                     param += f"&{i}={self.table_filters[i]}"
 
@@ -133,6 +140,9 @@ class TableUtilsBase:
     def get_form(self) -> BaseForm:
         return self.form
 
+    def form_setup(self):
+        raise NotImplementedError()
+
 
 class TableUtils(TableUtilsBase):
     """The custom table class with column list and filter names"""
@@ -153,12 +163,14 @@ class TableUtils(TableUtilsBase):
 
     def __init__(self, vulnerability_data: VulnerabilityDataBase, request: Any) -> None:
         super().__init__(vulnerability_data, request)
+
         if self.form:
-            self.form.add_field(
-                SelectField("impact", self.get_options_by_name("impact"))
-            )
-            self.form.add_field(
-                SelectField("category", self.get_options_by_name("category"))
-            )
-            self.form.add_field(SelectField("type", self.get_options_by_name("type")))
-            self.form.add_field(HiddenField("sort"))
+            self.form_setup()
+
+    def form_setup(self):
+        self.form.add_field(SelectField("impact", self.get_options_by_name("impact")))
+        self.form.add_field(
+            SelectField("category", self.get_options_by_name("category"))
+        )
+        self.form.add_field(SelectField("type", self.get_options_by_name("type")))
+        self.form.add_field(HiddenField("sort"))
