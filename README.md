@@ -1,5 +1,21 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 # UI Code challenge
 The goals of this challenge are to produce a small python flask app for the attached mock-up. There is also some dummy data provided that needs to be rendered into these views.
+
+# Short summary
+This is the first draft for the project.
+A lot still needs to be done.
+You can check [todo section](#todo-1-st-version) to see following steps.
+
+# Table of Contents
+ - [Info](#info)
+ - [Questions](#questions)
+ - [TODO. 1-st version.](#todo-1-st-version)
+ - [Features](#features)
+ - [TODO. 2-d version.](#todo-2-d-version)
+ - [Installation](#installation-development-environment-without-docker)
+ - [Testing](#testing)
 
 ## Info
  - Mock Up.png - Dashboard and Vulnerability mockups
@@ -23,6 +39,7 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Flask Blueprint
     - [x] .env file
     - [ ] Logging
+    - [ ] Load json file DATA_FILE at app start
  - [ ] Load Json data from a file
      - [x] Base load
      - [ ] Validate data with pydentic
@@ -55,6 +72,7 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Pagination
     - [ ] Vulnerability detail
     - [ ] Custom table "Sort" argument name
+    - [x] Column get parametrs !Refactoring needed
     - [ ] Refactoring
  - [ ] Frontend customisation
     - [ ] Gulp setup
@@ -64,6 +82,7 @@ Rendering template in the backend. Flask + Bootstrap.
  - [ ] Tests
  - [ ] Final check
     - [ ] Titles
+    - [ ] Logging
     - [ ] Sentry
     - [ ] Local/Production
     - [ ] Type checking
@@ -123,5 +142,5 @@ React + backend API
  - ```flask run```
  - Open http://localhost:5000 to view the Dashboard
 
-### Testing
+## Testing
 ```python -m pytest -v```
