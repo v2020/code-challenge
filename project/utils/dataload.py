@@ -36,7 +36,7 @@ class VulnerabilityDataJson(VulnerabilityDataBase):
         if not self._data:
             raise Exception("The data validation has failed")
 
-        if not self._check_data:
+        if self._check_data():
             raise Exception("The data file is empty")
 
         logger.info(
