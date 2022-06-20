@@ -15,13 +15,14 @@ class Column:
         self._key = key
         # check sort column
         self._active_key = active_key
-        self.active = key == self.clean_key(active_key)
         # sort direction
-        self.is_up = False
-        if self.active and not self._active_key.startswith("-"):
-            self.is_up = True
-
         self.table_filters = table_filters
+
+    def is_active(self):
+        return self._key == self.clean_key(self._active_key)
+
+    def is_up(self):
+        return bool(self.is_active and not self._active_key.startswith("-"))
 
     @staticmethod
     def clean_key(key):
@@ -30,11 +31,12 @@ class Column:
 
     @property
     def name(self):
-        return self._key.replace("_", " ").title() + " " + self._get_arrow()
+        name = self._key.replace("_", " ").title() + " " + self._get_arrow()
+        return name.strip()
 
     def _get_arrow(self):
-        if self.active:
-            return "🔼" if self.is_up else "🔽"
+        if self.is_active():
+            return "🔼" if self.is_up() else "🔽"
         return ""
 
     @property
@@ -45,7 +47,7 @@ class Column:
             str: get parameters
         """
         param = f"?sort={self._key}"
-        if self.is_up and self.active:
+        if self.is_up() and self.is_active():
             # reverse sort
             param = f"?sort=-{self._key}"
 

@@ -42,7 +42,7 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Load json file DATA_FILE at app start
  - [ ] Load Json data from a file
      - [x] Base load
-     - [ ] Validate data with pydentic
+     - [ ] Validate data with pydantic
      - [ ] Read json data from URL
  - [ ] Base layout
     - [x] Base template
