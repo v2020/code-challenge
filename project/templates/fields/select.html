@@ -1,0 +1,9 @@
+<div class="col-12">
+    <label class="visually-hidden" for="inlineFormSelectPref">{{name|title}}</label>
+    <select class="form-select" id="id_{{name}}" name="{{name}}">
+        <option>Choose...</option>
+        {% for item in options %}
+            <option {% if value==item %} selected {% endif %} value="{{item}}">{{item}}</option>
+        {% endfor %}
+    </select>
+</div>

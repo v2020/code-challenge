@@ -1,12 +1,15 @@
 import json
 import logging
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
 
 class VulnerabilityDataBase:
     """Load vulnerability data"""
 
     def get_list(self):
+        raise NotImplementedError()
+
+    def get_item(self):
         raise NotImplementedError()
 
 
@@ -20,6 +23,10 @@ class VulnerabilityDataJson(VulnerabilityDataBase):
         self._file_name = file_name
         self._load()
 
+    def _check_data(self):
+        # Not implemented
+        return False
+
     def _load(self):
         """Load Json data"""
         self._data = []
@@ -27,6 +34,9 @@ class VulnerabilityDataJson(VulnerabilityDataBase):
             self._data = json.load(f)
 
         if not self._data:
+            raise Exception("The data validation has failed")
+
+        if not self._check_data:
             raise Exception("The data file is empty")
 
         logger.info(
@@ -35,6 +45,9 @@ class VulnerabilityDataJson(VulnerabilityDataBase):
 
     def get_list(self):
         return self._data["items"]
+
+    def get_item(self, id) -> Union[Dict[str, Any], None]:
+        return next((i for i in self._data["items"] if i["_id"] == id), None)
 
 
 class VulnerabilityDataXml(VulnerabilityDataBase):

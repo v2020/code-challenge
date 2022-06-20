@@ -17,11 +17,12 @@ Rendering template in the backend. Flask + Bootstrap.
     - [x] Readme
     - [x] Views
     - [x] Templates
-    - [ ] Settings
-    - [ ] Static /
+    - [x] Settings
+    - [ ] Static (Assets)
     - [x] Tests
     - [ ] Flask Blueprint
-    - [ ] .env file
+    - [x] .env file
+    - [ ] Logging
  - [ ] Load Json data from a file
      - [x] Base load
      - [ ] Validate data with pydentic
@@ -30,12 +31,12 @@ Rendering template in the backend. Flask + Bootstrap.
     - [x] Base template
     - [x] Sidebar
     - [x] Dashboard
-        - [ ] Counters
+        - [x] Counters
         - [ ] Graphs
         - [ ] Graphs data API
     - [x] Vulnerability
-        - [ ] Table
-        - [ ] Filters
+        - [x] Table
+        - [x] Filters
     - [ ] Vulnerability detail
     - [ ] Adaptive version
       - [ ] Menu
@@ -44,14 +45,17 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Favicon
     - [ ] Sidebar menu. Generate menu data in flask.
  - [ ] Dashboard view
-    - [ ] Counters
-    - [ ] Graph widgets. Data.
-    - [ ] Graph widgets. Render.
+    - [x] Counters
+    - [x] Graph widgets. Data. !Refactoring needed
+    - [x] Graph widgets. Render. !Refactoring needed
+    - [ ] Refactoring
  - [ ] Vulnerability view
-    - [ ] Filters
-    - [ ] Table
+    - [x] Filters
+    - [x] Table
     - [ ] Pagination
     - [ ] Vulnerability detail
+    - [ ] Custom table "Sort" argument name
+    - [ ] Refactoring
  - [ ] Frontend customisation
     - [ ] Gulp setup
     - [ ] Branding
@@ -64,6 +68,7 @@ Rendering template in the backend. Flask + Bootstrap.
     - [ ] Local/Production
     - [ ] Type checking
     - [ ] Comments
+    - [ ] Add a Table of Contents to README
  - [ ] Updates
  - [ ] Deployment with Docker
  - [ ] CI/CD
@@ -112,12 +117,11 @@ React + backend API
 
 
 ## Installation (development environment) without docker
-```mkvirtualenv --python=$(which python3) challenge```
-```pip install -r requirements/local.txt```
-```export FLASK_APP=app.py```
-```export FLASK_ENV=development```
-```flask run```
-Open http://localhost:5000 to view the Dashboard
+ - ```mkvirtualenv --python=$(which python3) challenge```
+ - ```pip install -r requirements/local.txt```
+ - ```cp .env.dist .env``` / DATA_FILE setting - json data file
+ - ```flask run```
+ - Open http://localhost:5000 to view the Dashboard
 
 ### Testing
 ```python -m pytest -v```
