@@ -1,6 +1,6 @@
 import pytest
-from project import create_app
-from project.utils import VulnerabilityDataJson, VulnerabilityUtils
+from project.app import create_app
+from project.utils import DashboardUtils, VulnerabilityDataJson
 
 
 @pytest.fixture()
@@ -13,6 +13,12 @@ def client():
 
 
 @pytest.fixture()
+def dashboard_utils():
+    # DashboardUtils test
+    return DashboardUtils(VulnerabilityDataJson("tests/data/test_data.json"))
+
+
+@pytest.fixture()
 def vdata():
-    # VulnerabilityUtils test
-    return VulnerabilityUtils(VulnerabilityDataJson("tests/data/test_data.json"))
+    # VulnerabilityDataJson test
+    return VulnerabilityDataJson("tests/data/test_data.json")

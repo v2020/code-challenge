@@ -37,3 +37,27 @@ body {
     top: .25rem;
     right: 1rem;
   }
+
+.count_item {
+  min-width: 10rem;
+}
+
+.counts .medium {
+    background-color: #d0ac75;
+}
+
+.counts .critical {
+  background-color: #d9534f;
+}
+
+.counts .high {
+  background-color: #FFD950;
+}
+
+.counts .low {
+  background-color: #02BC77;
+}
+
+.counts .info {
+  background-color: #28c3d7;
+}

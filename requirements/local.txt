@@ -1,4 +1,4 @@
--r production.txt
+-r base.txt
 black==22.3.0
 mypy==0.961
 pytest==7.1.2
