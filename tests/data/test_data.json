@@ -1,0 +1,144 @@
+{
+    "items": [{
+        "mss_confirmed": false,
+        "domain": "5cd86128ec034ae8",
+        "manually_altered": false,
+        "probability": "2.0-low",
+        "cvss_base_score": 2.6,
+        "OWASP": {
+            "2017": {
+                "_meta": {
+                    "ordered_keys": ["name", "description"]
+                },
+                "name": "A3-Sensitive Data Exposure",
+                "description": "Many web applications and APIs do not properly protect sensitive data, such as financial,healthcare, and PII. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive data may be compromised without extra protection, such as encryption at rest or in transit, and requires special precautions when exchanged with the browser"
+            },
+            "_meta": {
+                "ordered_keys": ["2017", "2013"]
+            },
+            "2013": {
+                "_meta": {
+                    "ordered_keys": ["name", "description"]
+                },
+                "name": "A10-Unvalidated Redirects and Forwards",
+                "description": "Web applications frequently redirect and forward users to other pages and websites, and use untrusted data to determine the destination pages. Without proper validation, attackers can redirect victims to phishing or malware sites, or use forwards to access unauthorized pages. "
+            }
+        },
+        "disabled": false,
+        "meta": {
+            "scanning_engine": {
+                "type": "infra_scanner",
+                "name": "FakeNetworkScanner",
+                "_meta": {
+                    "ordered_keys": ["type", "name"]
+                }
+            },
+            "_meta": {
+                "ordered_keys": ["scanning_engine"]
+            }
+        },
+        "modified": "2021-11-11T13:53:19.992000",
+        "first_detected_at": "2021-11-11T13:53:19.943000",
+        "port": 137,
+        "impact": "2.0-low",
+        "last_detected_at": "2021-11-11T13:53:19.943000",
+        "title": "Microsoft Windows Remote Listeners Enumeration (WMI)",
+        "integration": [],
+        "priority": "2.0-low",
+        "results_set_id": ["ed7e2b13305349a4"],
+        "details": "\n\nThe Win32 process 'System' is listening on this port (pid 4).\n\n\n",
+        "type": "INFRA",
+        "trashed": false,
+        "status": "unfixed",
+        "category": "host",
+        "description": "This script uses WMI to list the processes running on the remote host\nand listening on TCP / UDP ports.\n\n",
+        "tags": [],
+        "ipv4_address": "134.209.19.251",
+        "host": "wwww.bbc.c.uk",
+        "_meta": {
+            "ordered_keys": ["status", "domain", "manually_altered", "probability", "cvss_base_score", "solution", "disabled", "meta", "first_detected_at", "port", "impact", "last_detected_at", "title", "integration", "priority", "results_set_id", "details", "type", "trashed", "mss_confirmed", "category", "description", "tags", "ipv4_address", "host", "OWASP", "cvss_vector", "_id", "target", "created", "notes", "modified", "suppression_days", "synopsis", "meta_migration", "signature", "fixed"]
+        },
+        "cvss_vector": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+        "fixed": false,
+        "target": "netbios-ns (137/udp)",
+        "created": "2021-11-11T13:53:19.941000",
+        "notes": "",
+        "solution": "n/a",
+        "suppression_days": 14,
+        "synopsis": "This script uses WMI to list the processes running on the remote host\nand listening on TCP / UDP ports.",
+        "meta_migration": [],
+        "signature": -3944040856291380077,
+        "_id": "14dd6c0f517a7c2773bcc7eff8682f289da40c87"
+    }, {
+        "mss_confirmed": false,
+        "domain": "5cd86128ec034ae8",
+        "manually_altered": false,
+        "probability": "3.0-medium",
+        "cvss_base_score": 2.6,
+        "OWASP": {
+            "2017": {
+                "_meta": {
+                    "ordered_keys": ["name", "description"]
+                },
+                "name": "A7-Cross-Site Scripting (XSS)",
+                "description": "XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or escaping, or updates an existing web page with user supplied data using a browser API that can create HTML or JavaScript. XSS allows attackers to execute scripts in the victim's browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites."
+            },
+            "_meta": {
+                "ordered_keys": ["2017", "2013"]
+            },
+            "2013": {
+                "_meta": {
+                    "ordered_keys": ["name", "description"]
+                },
+                "name": "A6-Sensitive Data Exposure",
+                "description": "Many web applications do not properly protect sensitive data, such as credit cards, tax IDs, and authentication credentials. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive data deserves extra protection such as encryption at rest or in transit, as well as special precautions when exchanged with the browser. "
+            }
+        },
+        "disabled": false,
+        "meta": {
+            "scanning_engine": {
+                "type": "infra_scanner",
+                "name": "FakeNetworkScanner",
+                "_meta": {
+                    "ordered_keys": ["type", "name"]
+                }
+            },
+            "_meta": {
+                "ordered_keys": ["scanning_engine"]
+            }
+        },
+        "modified": "2021-11-11T13:53:23.260000",
+        "first_detected_at": "2021-11-11T13:53:23.204000",
+        "port": 80,
+        "impact": "3.0-medium",
+        "last_detected_at": "2021-11-11T13:53:23.204000",
+        "title": "Service Detection",
+        "integration": [],
+        "priority": "3.0-medium",
+        "results_set_id": ["ed7e2b13305349a4"],
+        "details": "\nA web server is running on this port.\n",
+        "type": "INFRA",
+        "trashed": false,
+        "status": "unfixed",
+        "category": "host",
+        "description": "It was possible to identify the remote service by its banner or by looking\nat the error message it sends when it receives an HTTP request.\n\n",
+        "tags": [],
+        "ipv4_address": "134.209.19.251",
+        "host": "wwww.bbc.c.uk",
+        "_meta": {
+            "ordered_keys": ["status", "domain", "manually_altered", "probability", "cvss_base_score", "solution", "disabled", "meta", "first_detected_at", "port", "impact", "last_detected_at", "title", "integration", "priority", "results_set_id", "details", "type", "trashed", "mss_confirmed", "category", "description", "tags", "ipv4_address", "host", "OWASP", "cvss_vector", "_id", "target", "created", "notes", "modified", "suppression_days", "synopsis", "meta_migration", "signature", "fixed"]
+        },
+        "cvss_vector": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+        "fixed": false,
+        "target": "www (80/tcp)",
+        "created": "2021-11-11T13:53:23.204000",
+        "notes": "",
+        "solution": "n/a",
+        "suppression_days": 14,
+        "synopsis": "It was possible to identify the remote service by its banner or by looking\nat the error message it sends when it receives an HTTP request.",
+        "meta_migration": [],
+        "signature": 6591127568857218639,
+        "_id": "28f9f088e5d50baad9b53d130d9301e2586ca085"
+    }],
+    "hosts": []
+}

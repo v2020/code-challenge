@@ -1,0 +1,76 @@
+{% extends '_layouts/base.html' %}
+
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+<div class="d-flex justify-content-between mb-5 counts">
+  {% for item in counts %}
+    {% include "pages/dashboard_count.html" %}
+  {% endfor %}
+</div>
+
+<div class="row mb-4">
+  <div class="col-7">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Category</h5>
+        <div id="morris-donut-chart1"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Impact</h5>
+        <div id="morris-donut-chart2"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Type</h5>
+        <div id="morris-donut-chart3"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+
+
+{% block js %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+    Morris.Donut({
+        element: 'morris-donut-chart1',
+        data: [{% for key, value in graph_data1.items() %}{ label: "{{key}}", value: {{value}} },{%endfor%}],
+        resize: true,
+    });
+    Morris.Donut({
+      element: 'morris-donut-chart2',
+      data: [{% for key, value in graph_data2.items() %}{ label: "{{key}}", value: {{value}} },{%endfor%}],
+      resize: true,
+    });
+    Morris.Donut({
+      element: 'morris-donut-chart3',
+      data: [{% for key, value in graph_data3.items() %}{ label: "{{key}}", value: {{value}} },{%endfor%}],
+      resize: true,
+    });
+  });
+
+  </script>
+
+{% endblock js %}
+
+{% block css %}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+{% endblock css %}

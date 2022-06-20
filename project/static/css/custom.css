@@ -1,0 +1,63 @@
+body {
+    font-size: .875rem;
+  }
+
+  .feather {
+    width: 16px;
+    height: 16px;
+  }
+
+  /*
+   * Sidebar
+   */
+
+  .sidebar {
+    position: fixed; height: calc(100vh - 48px);
+    z-index: 100; /* Behind the navbar */
+    padding: 0 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+
+  @media (max-width: 767.98px) {
+    .sidebar {
+      top: 5rem;
+    }
+  }
+
+  /*
+   * Navbar
+   */
+
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+
+  .navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+  }
+
+.count_item {
+  min-width: 10rem;
+}
+
+.counts .medium {
+    background-color: #d0ac75;
+}
+
+.counts .critical {
+  background-color: #d9534f;
+}
+
+.counts .high {
+  background-color: #FFD950;
+}
+
+.counts .low {
+  background-color: #02BC77;
+}
+
+.counts .info {
+  background-color: #28c3d7;
+}

@@ -6,33 +6,72 @@ The goals of this challenge are to produce a small python flask app for the atta
  - UI Code challenge.docx - description of the challenge
  - Vulnerability data.json - dummy data
 
+## Questions
+ - [ ] Use cases
+ - [ ] Users roles
+ - [ ] Tech. requiments
+
 ## TODO. 1-st version.
 Rendering template in the backend. Flask + Bootstrap.
  - [ ] Project setup
+    - [x] Readme
+    - [x] Views
+    - [x] Templates
+    - [x] Settings
+    - [ ] Static (Assets)
+    - [x] Tests
+    - [ ] Flask Blueprint
+    - [x] .env file
+    - [ ] Logging
  - [ ] Load Json data from a file
-     - [ ] Base load
+     - [x] Base load
      - [ ] Validate data with pydentic
+     - [ ] Read json data from URL
  - [ ] Base layout
-    - [ ] Base template
-    - [ ] Dashboard
-    - [ ] Vulnerability
-    - [ ] Sidebar
- - [ ] Dashboard
-    - [ ] Counters
-    - [ ] Graph widgets. Data.
-    - [ ] Graph widgets. Render.
- - [ ] Vulnerability
-    - [ ] Filters
-    - [ ] Table
+    - [x] Base template
+    - [x] Sidebar
+    - [x] Dashboard
+        - [x] Counters
+        - [ ] Graphs
+        - [ ] Graphs data API
+    - [x] Vulnerability
+        - [x] Table
+        - [x] Filters
+    - [ ] Vulnerability detail
+    - [ ] Adaptive version
+      - [ ] Menu
+      - [ ] Views
+    - [ ] 404/500 errors templates
+    - [ ] Favicon
+    - [ ] Sidebar menu. Generate menu data in flask.
+ - [ ] Dashboard view
+    - [x] Counters
+    - [x] Graph widgets. Data. !Refactoring needed
+    - [x] Graph widgets. Render. !Refactoring needed
+    - [ ] Refactoring
+ - [ ] Vulnerability view
+    - [x] Filters
+    - [x] Table
     - [ ] Pagination
+    - [ ] Vulnerability detail
+    - [ ] Custom table "Sort" argument name
+    - [ ] Refactoring
  - [ ] Frontend customisation
     - [ ] Gulp setup
     - [ ] Branding
     - [ ] Custom styles
     - [ ] Responsive layouts
  - [ ] Tests
+ - [ ] Final check
+    - [ ] Titles
+    - [ ] Sentry
+    - [ ] Local/Production
+    - [ ] Type checking
+    - [ ] Comments
+    - [ ] Add a Table of Contents to README
  - [ ] Updates
  - [ ] Deployment with Docker
+ - [ ] CI/CD
 
 ## Features
  - [ ] Login/logout pages
@@ -43,11 +82,6 @@ Rendering template in the backend. Flask + Bootstrap.
  - [ ] Notifications/Alerts
  - [ ] Statistics
  - [ ] ? Live graphs
-
-## Questions
- - [ ] Use cases
- - [ ] Users roles
- - [ ] Tech. requiments
 
 
 ## TODO. 2-d version.
@@ -66,6 +100,7 @@ React + backend API
  - [ ]  React. Initial project
  - [ ]  React. Components
 	 - [ ] Login page
+        - [ ] Login form
 	 - [ ] Sidebar
 		 - [ ] Menu item
 	 - [ ]  Dashboard
@@ -79,3 +114,14 @@ React + backend API
  - [ ]  React. Load data
  - [ ]  React. Tests
  - [ ]  React. Deployment
+
+
+## Installation (development environment) without docker
+ - ```mkvirtualenv --python=$(which python3) challenge```
+ - ```pip install -r requirements/local.txt```
+ - ```cp .env.dist .env``` / DATA_FILE setting - json data file
+ - ```flask run```
+ - Open http://localhost:5000 to view the Dashboard
+
+### Testing
+```python -m pytest -v```
