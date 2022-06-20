@@ -3,6 +3,10 @@
 # UI Code challenge
 The goals of this challenge are to produce a small python flask app for the attached mock-up. There is also some dummy data provided that needs to be rendered into these views.
 
+# Short summary
+This is the first draft for the project.
+A lot still needs to be done.
+You can check [todo section](#todo-1-st-version) to see following steps.
 
 # Table of Contents
  - [Info](#info)
